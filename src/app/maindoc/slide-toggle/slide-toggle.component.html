@@ -1,0 +1,227 @@
+<div class="wrapper">
+    <h4>Slide Toggle</h4>
+    <h5>Overview</h5>
+    <p>&lt;mat-slide-toggle&gt; is an on/off control that can be toggled via clicking.</p>
+    <div class="example">
+        <mat-slide-toggle>Slide me!</mat-slide-toggle>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <p>The slide-toggle behaves similarly to a checkbox, though it does not support an indeterminate state like &lt;mat-checkbox&gt;.</p>
+    <h6>Slide-toggle label</h6>
+<p>The slide-toggle label is provided as the content to the &lt;mat-slide-toggle&gt; element.</p>
+<p>If you don't want the label to appear next to the slide-toggle, you can use aria-label or aria-labelledby to specify an appropriate label.</p>
+<h5>Use with @angular/forms</h5>
+<p>&lt;mat-slide-toggle&gt; is compatible with @angular/forms and supports both FormsModule and ReactiveFormsModule.</p>
+
+<h6>API</h6>
+    <h5>API reference for Angular Material slide-toggle</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatSlideToggle</h5>
+    <p>Represents a slidable "switch" toggle that can be moved between on and off.</p>
+    <p>Selector: <code>mat-slide-toggle</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+            </div><p class="docs-api-property-name">
+          <code>ariaLabel: string | null</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Used to set the aria-label attribute on the underlying input element.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+            </div><p class="docs-api-property-name">
+          <code>ariaLabelledby: string | null</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Used to set the aria-labelledby attribute on the underlying input element.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>checked: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the slide-toggle element is checked or not.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disableRipple: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>id: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A unique id for the slide-toggle input. If none is supplied, it will be auto-generated.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>labelPosition: 'before' | 'after'</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the label should appear after or before the slide-toggle. Defaults to 'after'.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>name: string | null</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Name value will be applied to the input element if present.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>required: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the slide-toggle is required.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>change: EventEmitter&lt;MatSlideToggleChange&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle changes its value.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>toggleChange: EventEmitter&lt;void&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle input is toggled.
+    This event is always emitted when the user toggles the slide toggle, but this does not mean
+    the slide toggle's value has changed.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>defaults: MatSlideToggleDefaultOptions</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"></td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>inputId: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Returns the unique id for the visual hidden input.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

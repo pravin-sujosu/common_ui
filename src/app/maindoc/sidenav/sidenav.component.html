@@ -1,0 +1,165 @@
+<div class="wrapper">
+    <h4>Sidenav</h4>
+    <h5>Overview</h5>
+    <p>Angular Material provides two sets of components designed to add collapsible side content (often navigation, though it can be any content) alongside some primary content. These are the sidenav and drawer components.</p>
+    <p>The sidenav components are designed to add side content to a fullscreen app. To set up a sidenav we use three components: &lt;mat-sidenav-container&gt; which acts as a structural container for our content and sidenav, &lt;mat-sidenav-content&gt; which represents the main content, and &lt;mat-sidenav&gt; which represents the added side content.</p>
+    <p>The drawer component is designed to add side content to a small section of your app. This is accomplished using the &lt;mat-drawer-container&gt;, &lt;mat-drawer-content&gt;, and &lt;mat-drawer&gt; components, which are analogous to their sidenav equivalents. Rather than adding side content to the app as a whole, these are designed to add side content to a small section of your app. They support almost all of the same features, but do not support fixed positioning.</p>
+    <div class="example">
+      <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+        <mat-drawer-content>Main content</mat-drawer-content>
+      </mat-drawer-container>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Specifying the main and side content</h6>
+<p>Both the main and side content should be placed inside of the &lt;mat-sidenav-container&gt;, content that you don't want to be affected by the sidenav, such as a header or footer, can be placed outside of the container.</p>
+
+<p>  The side content should be wrapped in a &lt;mat-sidenav&gt; element. The position property can be used to specify which end of the main content to place the side content on. position can be either start or end which places the side content on the left or right respectively in left-to-right languages. If the position is not set, the default value of start will be assumed. A &lt;mat-sidenav-container&gt; can have up to two &lt;mat-sidenav&gt; elements total, but only one for any given side. The &lt;mat-sidenav&gt; must be placed as an immediate child of the &lt;mat-sidenav-container&gt;.
+</p>
+
+
+<h6>API</h6>
+    <h5>API reference for Angular Material sidenav</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatDrawerContent extends CdkScrollable</h5>
+    <p>Selector: <code>mat-drawer-content</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+      <tbody><tr class="docs-api-properties-header-row">
+        <th class="docs-api-properties-th">Name</th>
+        <th class="docs-api-properties-th">Description</th>
+      </tr>
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+            @Input()</div><p class="docs-api-property-name">
+        <code>autoFocus: boolean</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Whether the drawer should focus the first focusable element automatically when opened.
+  Defaults to false in when <code>mode</code> is set to <code>side</code>, otherwise defaults to <code>true</code>. If explicitly
+  enabled, focus will be moved into the sidenav in <code>side</code> mode as well.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+            @Input()</div><p class="docs-api-property-name">
+        <code>disableClose: boolean</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Whether the drawer can be closed with the escape key or by clicking on the backdrop.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+            @Input()</div><p class="docs-api-property-name">
+        <code>mode: MatDrawerMode</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Mode of the drawer; one of 'over', 'push' or 'side'.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+            @Input()</div><p class="docs-api-property-name">
+        <code>opened: boolean</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Whether the drawer is opened. We overload this because we trigger an event when it
+  starts or end.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+            @Input()</div><p class="docs-api-property-name">
+        <code>position: 'start' | 'end'</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>The side that the drawer is attached to.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+            @Output()</div><p class="docs-api-property-name">
+        <code>closedStart: Observable&lt;void&gt;</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Event emitted when the drawer has started closing.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'positionChanged'</span>)
+          </div><p class="docs-api-property-name">
+        <code>onPositionChanged: EventEmitter&lt;void&gt;</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Event emitted when the drawer's position changes.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+            @Output()</div><p class="docs-api-property-name">
+        <code>openedChange: EventEmitter&lt;boolean&gt;</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Event emitted when the drawer open state is changed.</p>
+  </td>
+  </tr>
+  
+  
+      
+        
+  
+  <tr class="docs-api-properties-row">
+    <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+            @Output()</div><p class="docs-api-property-name">
+        <code>openedStart: Observable&lt;void&gt;</code>
+      </p>
+    </td>
+    <td class="docs-api-property-description"><p>Event emitted when the drawer has started opening.</p>
+  </td>
+  </tr>
+  
+  
+      
+    </tbody></table>
+</div>

@@ -1,0 +1,174 @@
+<div class="wrapper">
+    <h4>Tooltip</h4>
+    <h5>Overview</h5>
+    <p>The Angular Material tooltip provides a text label that is displayed when the user hovers over or longpresses an element.</p>
+    <div class="example">
+        <button mat-raised-button
+        matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+  Action
+</button>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Positioning</h6>
+<p>The tooltip will be displayed below the element but this can be configured using the matTooltipPosition input. The tooltip can be displayed above, below, left, or right of the element. By default the position will be below. If the tooltip should switch left/right positions in an RTL layout direction, then the positions before and after should be used instead of left and right, respectively.</p>
+<table>
+    <thead>
+    <tr>
+    <th>Position</th>
+    <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+    <td><code>above</code></td>
+    <td>Always display above the element</td>
+    </tr>
+    <tr>
+    <td><code>below</code></td>
+    <td>Always display beneath the element</td>
+    </tr>
+    <tr>
+    <td><code>left</code></td>
+    <td>Always display to the left of the element</td>
+    </tr>
+    <tr>
+    <td><code>right</code></td>
+    <td>Always display to the right of the element</td>
+    </tr>
+    <tr>
+    <td><code>before</code></td>
+    <td>Display to the left in left-to-right layout and to the right in right-to-left layout</td>
+    </tr>
+    <tr>
+    <td><code>after</code></td>
+    <td>Display to the right in left-to-right layout and to the left in right-to-left layout</td>
+    </tr>
+    </tbody></table>
+<h6>API</h6>
+    <h5>API reference for Angular Material tooltip</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatTooltip</h5>
+    <p>Directive that attaches a material design tooltip to the host element. Animates the showing and hiding of a tooltip provided position (defaults to below the element).</p>
+    <p>Selector: <code>[matTooltip]</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipDisabled'</span>)
+            </div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Disables the display of the tooltip.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipHideDelay'</span>)
+            </div><p class="docs-api-property-name">
+          <code>hideDelay: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The default delay in ms before hiding the tooltip after hide is called</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltip'</span>)
+            </div><p class="docs-api-property-name">
+          <code>message: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The message to be displayed in the tooltip</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipPosition'</span>)
+            </div><p class="docs-api-property-name">
+          <code>position: TooltipPosition</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Allows the user to define the position of the tooltip relative to the parent element</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipShowDelay'</span>)
+            </div><p class="docs-api-property-name">
+          <code>showDelay: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The default delay in ms before showing the tooltip after show is called</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipClass'</span>)
+            </div><p class="docs-api-property-name">
+          <code>tooltipClass: any</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Classes to be passed to the tooltip. Supports the same syntax as <code>ngClass</code>.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipTouchGestures'</span>)
+            </div><p class="docs-api-property-name">
+          <code>touchGestures: TooltipTouchGestures</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>How touch gestures should be handled by the tooltip. On touch devices the tooltip directive
+    uses a long press gesture to show and hide, however it can conflict with the native browser
+    gestures. To work around the conflict, Angular Material disables native gestures on the
+    trigger, but that might not be desirable on particular elements (e.g. inputs and draggable
+    elements). The different values for this option configure the touch event handling as follows:</p>
+    <ul>
+    <li><code>auto</code> - Enables touch gestures for all elements, but tries to avoid conflicts with native
+    browser gestures on particular elements. In particular, it allows text selection on inputs
+    and textareas, and preserves the native browser dragging on elements marked as <code>draggable</code>.</li>
+    <li><code>on</code> - Enables touch gestures for all elements and disables native
+    browser gestures with no exceptions.</li>
+    <li><code>off</code> - Disables touch gestures. Note that this will prevent the tooltip from
+    showing on touch devices.</li>
+    </ul>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

@@ -1,0 +1,502 @@
+<div class="wrapper">
+    <h4>Select</h4>
+    <h5>Overview</h5>
+    <p>&lt;mat-select&gt; is a form control for selecting a value from a set of options, similar to the native &lt;select&gt; element. You can read more about selects in the <a href="https://material.io/design/components/menus.html">Material Design spec</a>. It is designed to work inside of a &lt;mat-form-field&gt; element.</p>
+    <p>
+        To add options to the select, add &lt;mat-option&gt; elements to the &lt;mat-select&gt;. Each &lt;mat-option&gt; has a value property that can be used to set the value that will be selected if the user chooses this option. The content of the &lt;mat-option&gt; is what will be shown to the user.
+    </p>
+    <p>To use a native select inside &lt;mat-form-field&gt;, add the matNativeControl attribute to the &lt;select&gt; element.</p>
+    <div class="example">
+        <h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<h4>Basic native select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Cars</mat-label>
+  <select matNativeControl required>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select>
+</mat-form-field>
+    </div>
+    <pre><code [highlight]="code" class="p-2"></code></pre>
+    <h6>Getting and setting the select value</h6>
+
+<p>The &lt;mat-select&gt; supports 2-way binding to the value property without the need for Angular forms.</p>
+<div class="example">
+    <mat-form-field appearance="fill">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <p>You selected: {{selected}}</p>
+</div>
+<pre><code [highlight]="code1" class="p-2"></code></pre>
+
+
+<h6>API</h6>
+    <h5>API reference for Angular Material select</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatSelectTrigger</h5>
+    <p>Allows the user to customize the trigger that is displayed when the select has a value.</p>
+    <p>Selector: <code>mat-select-trigger</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+            </div><p class="docs-api-property-name">
+          <code>ariaLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Aria label of the select. If not specified, the placeholder will be used as label.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+            </div><p class="docs-api-property-name">
+          <code>ariaLabelledby: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Input that can be used to specify the <code>aria-labelledby</code> attribute.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>compareWith: (o1: any, o2: any) =&gt; boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Function to compare the option values with the selected values. The first argument
+    is a value from an option. The second is a value from the selection. A boolean
+    should be returned.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disableOptionCentering: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether to center the active option over the trigger.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disableRipple: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>errorStateMatcher: ErrorStateMatcher</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Object used to control when error messages are shown.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>id: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Unique id of the element.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>multiple: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the user should be allowed to select multiple options.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <!-- <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>panelClass: string | string[] | Set&lt;string&gt; | {
+        [key: string]: any;
+    }</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Classes to be passed to the select panel. Supports the same syntax as <code>ngClass</code>.</p>
+    </td>
+    </tr> -->
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>placeholder: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Placeholder to be shown if no value has been selected.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>required: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is required.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <!-- <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>sortComparator: (a: MatOption, b: MatOption, options: MatOption[]) =&gt; number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Function used to sort the values in a select in multiple mode.
+    Follows the same logic as <code>Array.prototype.sort</code>.</p>
+    </td>
+    </tr> -->
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>typeaheadDebounceInterval: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Time to wait in milliseconds after the last keystroke before moving focus to an item.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>value: any</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Value of the select control.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>openedChange: EventEmitter&lt;boolean&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Event emitted when the select panel has been toggled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>selectionChange: EventEmitter&lt;MatSelectChange&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Event emitted when the selected value has been changed by the user.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>controlType: 'mat-select'</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A name for this control that can be used by <code>mat-form-field</code>.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>customTrigger: MatSelectTrigger</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>User-supplied override of the trigger element.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>empty: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the select has a value.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>errorState: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"></td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>focused: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the select is focused.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>ngControl: NgControl</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"></td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>optionGroups: QueryList&lt;MatOptgroup&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>All of the defined groups of options.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>optionSelectionChanges: Observable&lt;MatOptionSelectionChange&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Combined stream of all of the child options' change events.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>options: QueryList&lt;MatOption&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>All of the defined select options.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>panel: ElementRef</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Panel containing the select options.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>panelOpen: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether or not the overlay panel is open.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>selected: MatOption | MatOption[]</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The currently selected option.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>stateChanges: Subject&lt;void&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"></td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>trigger: ElementRef</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Trigger that opens the select.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>triggerValue: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The value displayed in the trigger.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

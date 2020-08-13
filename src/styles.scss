@@ -1,0 +1,172 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+// @import url('~@angular/material/prebuilt-themesindigo-pink.css');
+@import url('../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css');
+@import '~highlight.js/styles/monokai.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a {
+    text-decoration: none;
+  }
+  
+  // doc css
+  .docs-navbar-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+  }
+  .docs-navbar-header {
+    background: #9c27b0;
+    color: #fff;
+  }
+  .docs-primary-header h1 {
+    font-weight: 300;
+    margin: 0;
+    padding: 28px 8px;
+    font-size: 20px;
+  }
+  .docs-primary-header {
+    background: #9c27b0;
+    margin-top: 52px;
+    color: #ffffff;
+    padding-left: 30px;
+  }
+  .appnavbar {
+    position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+  }
+  
+  .docs-component-category-list-summary {
+    padding: 25px 40px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+  }
+  .docs-component-category-list-summary a {
+    color: #ce93d8;
+  }
+  .docs-component-category-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .docs-component-category-list-item{
+    text-decoration: none;
+  }
+  .docs-component-category-list-item {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    width: 280px;
+  }
+  
+  .docs-component-category-list-card{
+    overflow: hidden;
+  }
+  
+  .docs-component-category-list-card {
+    border: 1px solid hsla(0,0%,100%,.12);
+    border-radius: 4px;
+    background: #424242;
+  }
+  .docs-component-category-list-card-image-wrapper {
+    height: 156px;
+    background-size: cover;
+  }
+  .docs-component-category-list-card-image-wrapper {
+    border-bottom: 1px solid hsla(0,0%,100%,.12);
+  }
+  .docs-component-category-list-card-title {
+    color: #fff;
+  }
+  .docs-component-category-list-card-summary {
+    padding: 0 15px 15px;
+      min-height: 2.4em;
+      font-size: 15px;
+  }
+  
+  .docs-component-category-list-item
+  .docs-component-category-list-card-title{
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .docs-component-category-list-card-summary {
+    color: hsla(0,0%,100%,.7);
+  }
+  button:focus {
+    outline: none;
+  }
+
+ code {
+    background: hsla(0,0%,100%,.06);
+    color: #f3f1f1;
+    padding: 3px;
+}
+.docs-api th, .docs-markdown-th {
+  background: #212121;
+}
+.docs-api table, .docs-markdown-table {
+  border-collapse: collapse;
+  border-radius: 2px;
+  border-spacing: 0;
+  margin: 0 0 32px;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+table{
+  color: #fff;
+}
+th {
+  background: #212121;
+  padding: 13px 16px;
+}
+td{
+  border: 1px solid hsla(0,0%,100%,.08);
+}
+.example {
+  border: 1px solid #7d7171;
+  padding: 30px;
+  margin: 50px 0;
+  border-radius: 5px;
+}
+
+// .sidebar {
+//   overflow: auto;
+//     height: 100vh;
+// }
+// .sidebar::-webkit-scrollbar {
+//   width: 12px;
+// }
+
+// /* Track */
+// .sidebar::-webkit-scrollbar-track {
+//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+//   -webkit-border-radius: 10px;
+//   border-radius: 10px;
+// }
+
+// /* Handle */
+// .sidebar::-webkit-scrollbar-thumb {
+//   -webkit-border-radius: 10px;
+//   border-radius: 10px;
+//   background: rgba(255,0,0,0.8); 
+//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+// }
+// .sidebar::-webkit-scrollbar-thumb:window-inactive {
+// background: rgba(255,0,0,0.4); 
+// }
+
+.mat-progress-bar-buffer {
+  background-color: #f8bbd0;
+} 

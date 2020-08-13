@@ -1,0 +1,180 @@
+<div class="wrapper">
+    <h4>Badge</h4>
+    <h5>Overview</h5>
+    <p>Badges are small status descriptors for UI elements. A badge consists of a small circle, typically containing a number or other short set of characters, that appears in proximity to another object.</p>
+    <div class="example">
+        <p><strong>Badge overview</strong></p>
+        <p>
+            <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+          </p>
+          
+          <p>
+              <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+          </p>
+          
+          <p>
+            Button with a badge on the left
+            <button mat-raised-button color="primary"
+                matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+              Action
+            </button>
+          </p>
+          
+          <p>
+              Button toggles badge visibility
+              <button mat-raised-button matBadge="7">
+                  Hide
+              </button>
+          </p>
+          
+          <p>
+            Icon with a badge
+            <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+              <!-- Include text description of the icon's meaning for screen-readers -->
+              <span class="cdk-visually-hidden">
+                Example with a home icon with overlaid badge showing the number 15
+              </span>
+          </p>
+    </div>
+    <h6>Badge position</h6>
+<p>By default, the badge will be placed above after. The direction can be changed by defining the attribute matBadgePosition follow by above|below and before|after.</p>
+<pre><code [highlight]="code" class="p-2"></code></pre>
+<p>The overlap of the badge in relation to its inner contents can also be defined using the matBadgeOverlap tag. Typically, you want the badge to overlap an icon and not a text phrase. By default it will overlap.</p>
+<pre><code [highlight]="code1" class="p-2"></code></pre>
+
+<h6>Badge sizing</h6>
+<p>The badge has 3 sizes: small, medium and large. By default, the badge is set to medium. You can change the size by adding matBadgeSize to the host element.</p>
+<pre><code [highlight]="code2" class="p-2"></code></pre>
+<h6>Badge visibility</h6>
+<p>The badge visibility can be toggled programmatically by defining matBadgeHidden.</p>
+<pre><code [highlight]="code3" class="p-2"></code></pre>
+<h6>API</h6>
+    <h5>API reference for Angular Material badge</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatBadge</h5>
+    <p>Directive to display a text badge.</p>
+    <p>Selector: <code>[matBadge]</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeColor'</span>)
+            </div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The color of the badge. Can be <code>primary</code>, <code>accent</code>, or <code>warn</code>.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadge'</span>)
+            </div><p class="docs-api-property-name">
+          <code>content: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The content for the badge</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeDescription'</span>)
+            </div><p class="docs-api-property-name">
+          <code>description: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Message used to describe the decorated element via aria-describedby</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matBadgeDisabled</span>)
+            </div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeHidden'</span>)
+            </div><p class="docs-api-property-name">
+          <code>hidden: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the badge is hidden.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeOverlap'</span>)
+            </div><p class="docs-api-property-name">
+          <code>overlap: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the badge should overlap its contents or not</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgePosition'</span>)
+            </div><p class="docs-api-property-name">
+          <code>position: MatBadgePosition</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Position the badge should reside.
+    Accepts any combination of 'above'|'below' and 'before'|'after'</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeSize'</span>)
+            </div><p class="docs-api-property-name">
+          <code>size: MatBadgeSize</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Size of the badge. Can be 'small', 'medium', or 'large'.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

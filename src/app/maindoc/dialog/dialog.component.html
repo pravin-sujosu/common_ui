@@ -1,0 +1,85 @@
+<div class="wrapper">
+    <h4>Dialog</h4>
+    <h5>Overview</h5>
+    <p>The MatDialog service can be used to open modal dialogs with Material Design styling and animations.</p>
+    <div class="example">
+        <ol>
+            <li>
+              <mat-form-field>
+                <mat-label>What's your name?</mat-label>
+                <input matInput [(ngModel)]="name">
+              </mat-form-field>
+            </li>
+            <li>
+              <button mat-raised-button (click)="openDialog()">Pick one</button>
+            </li>
+            <li *ngIf="animal">
+              You chose: <i>{{animal}}</i>
+            </li>
+          </ol>
+    </div>
+    
+<p>A dialog is opened by calling the open method with a component to be loaded and an optional config object. The open method will return an instance of MatDialogRef:</p>
+<pre><code [highlight]="code" class="p-2"></code></pre>
+<p>The MatDialogRef provides a handle on the opened dialog. It can be used to close the dialog and to receive notification when the dialog has been closed.</p>
+<pre><code [highlight]="code1" class="p-2"></code></pre>
+
+<p>Components created via MatDialog can inject MatDialogRef and use it to close the dialog in which they are contained. When closing, an optional result value can be provided. This result value is forwarded as the result of the afterClosed promise.</p>
+<pre><code [highlight]="code2" class="p-2"></code></pre>
+
+<h6>API</h6>
+    <h5>API reference for Angular Material dialog</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatDialog</h5>
+    <p>Service to open Material Design modal dialogs.</p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>afterAllClosed: Observable&lt;void&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Stream that emits when all open dialog have finished closing.
+    Will emit on subscribe if there are no open dialogs to begin with.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>afterOpened: Subject&lt;MatDialogRef&lt;any&gt;&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Stream that emits when a dialog has been opened.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>openDialogs: MatDialogRef&lt;any&gt;[]</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Keeps track of the currently-open dialogs.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

@@ -1,0 +1,141 @@
+<div class="wrapper">
+    <h4>Progress Bar</h4>
+    <h5>Overview</h5>
+    <p>&lt;mat-progress-bar&gt; is a horizontal progress-bar for indicating progress and activity.</p>
+    <h5>Progress mode</h5>
+    <p>The progress-bar supports four modes: determinate, indeterminate, buffer and query.</p>
+    <h6>Determinate</h6>
+    <p>Operations where the percentage of the operation complete is known should use the determinate indicator.</p>
+    <div class="example">
+        <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+    </div>
+    <pre><code [highlight]="code" class="p-2"></code></pre>
+ 
+<p>This is the default mode and the progress is represented by the value property.</p>
+<h6>Indeterminate</h6>
+<p>Operations where the user is asked to wait while something finishes and it’s not necessary to indicate how long it will take should use the indeterminate indicator.</p>
+<div class="example">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<pre><code [highlight]="code1" class="p-2"></code></pre>
+<p>In this mode the value property is ignored.</p>
+
+<h6>Buffer</h6>
+<p>Operations where the user wants to indicate some activity or loading from the server, use the buffer indicator.</p>
+<div class="example">
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>
+<pre><code [highlight]="code2" class="p-2"></code></pre>
+
+<p>In "buffer" mode, value determines the progress of the primary bar while the bufferValue is used to show the additional buffering progress.</p>
+<h6>Query</h6>
+<p>For situations where the user wants to indicate pre-loading (until the loading can actually be made), use the query indicator.</p>
+<div class="example">
+    <mat-progress-bar mode="query"></mat-progress-bar>
+</div>
+<h6>API</h6>
+    <h5>API reference for Angular Material progress-bar</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatProgressBar</h5>
+    <p>Directive to display a text badge.</p>
+    <p>Selector: <code>mat-progress-bar</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>bufferValue: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Buffer value of the progress bar. Defaults to zero.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>mode: ProgressBarMode</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Mode of the progress bar.</p>
+    <p>Input must be one of these values: determinate, indeterminate, buffer, query, defaults to
+    'determinate'.
+    Mirrored to mode attribute.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>value: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Value of the progress bar. Defaults to zero. Mirrored to aria-valuenow.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>animationEnd: EventEmitter&lt;ProgressAnimationEnd&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Event emitted when animation of the primary progress bar completes. This event will not
+    be emitted when animations are disabled, nor will it be emitted for modes with continuous
+    animations (indeterminate and query).</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>progressbarId: mat-progress-bar-1</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>ID of the progress bar.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

@@ -1,0 +1,98 @@
+<div class="wrapper">
+    <h4>Grid list</h4>
+    <h5>Overview</h5>
+    <p>mat-grid-list is a two-dimensional list view that arranges cells into grid-based layout. See Material Design spec here.</p>
+    <div class="example">
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>1</mat-grid-tile>
+            <mat-grid-tile>2</mat-grid-tile>
+            <mat-grid-tile>3</mat-grid-tile>
+            <mat-grid-tile>4</mat-grid-tile>
+          </mat-grid-list>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Setting the number of columns</h6>
+
+<p>An mat-grid-list must specify a cols attribute which sets the number of columns in the grid. The number of rows will be automatically determined based on the number of columns and the number of items.</p>
+<h4>Setting the row height</h4>
+<p>The height of the rows in a grid list can be set via the rowHeight attribute. Row height for the list can be calculated in three ways:</p>
+<ol>
+    <li><p><strong>Fixed height</strong>: The height can be in <code>px</code>, <code>em</code>, or <code>rem</code>.  If no units are specified, <code>px</code>
+    units are assumed (e.g. <code>100px</code>, <code>5em</code>, <code>250</code>).</p>
+    </li>
+    <li><p><strong>Ratio</strong>: This ratio is column-width:row-height, and must be passed in with a colon, not a
+    decimal (e.g. <code>4:3</code>).</p>
+    </li>
+    <li><p><strong>Fit</strong>:  Setting <code>rowHeight</code> to <code>fit</code> This mode automatically divides the available height by
+    the number of rows.  Please note the height of the grid-list or its container must be set.</p>
+    </li>
+    </ol>
+<p>If rowHeight is not specified, it defaults to a 1:1 ratio of width:height.</p>
+
+<h6>Setting the gutter size</h6>
+<p>The gutter size can be set to any px, em, or rem value with the gutterSize property. If no units are specified, px units are assumed. By default the gutter size is 1px.</p>
+<h6>Adding tiles that span multiple rows or columns</h6>
+<p>It is possible to set the rowspan and colspan of each mat-grid-tile individually, using the rowspan and colspan properties. If not set, they both default to 1. The colspan must not exceed the number of cols in the mat-grid-list. There is no such restriction on the rowspan however, more rows will simply be added for it the tile to fill.</p>
+<h6>Tile headers and footers</h6>
+<p>A header and footer can be added to an mat-grid-tile using the mat-grid-tile-header and mat-grid-tile-footer elements respectively.</p>
+<h6>Accessibility</h6>
+<p>By default, the grid-list assumes that it will be used in a purely decorative fashion and thus sets no roles, ARIA attributes, or keyboard shortcuts. This is equivalent to having a sequence of 'div' elements on the page. Any interactive content within the grid-list should be given an appropriate accessibility treatment based on the specific workflow of your application.</p>
+<p>If the grid-list is used to present a list of non-interactive content items, then the grid-list element should be given role="list" and each tile should be given role="listitem".</p>
+<h6>API</h6>
+    <h5>API reference for Angular Material grid-list</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatGridList</h5>
+    <p>Selector: <code>mat-grid-list</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>cols: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Amount of columns in the grid list.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>gutterSize: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Size of the grid list's gutter in pixels.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>rowHeight: string | number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Set internal representation of row height from the user-provided value.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

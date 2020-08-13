@@ -1,0 +1,153 @@
+<div class="wrapper">
+    <h4>Ripple</h4>
+    <h5>Overview</h5>
+    <p>Connect user input to screen reactions by using ripples to both indicate the point of touch, and to confirm that touch input was received. For touch or mouse, this occurs at the point of contact.</p>
+    <p>The matRipple attribute directive defines an area in which a ripple animates on user interaction.</p>
+    <pre><code [highlight]="code" class="p-2"></code></pre>
+    <p>By default, a ripple is activated when the host element of the matRipple directive receives mouse or touch events. Upon being pressed, a ripple will begin fading in from the point of contact, radiating to cover the host element. Each ripple will fade out only upon release of the mouse or touch.</p>
+
+<p>Ripples can also be triggered programmatically by getting a reference to the MatRipple directive and calling its launch method.</p>
+
+<h6>Ripple trigger</h6>
+<p>By default ripples will fade in on interaction with the directive's host element. In some situations, developers may want to show ripples on interaction with some other element, but still want to have the ripples placed in another location. This can be done by specifying the matRippleTrigger option that expects a reference to an HTMLElement.</p>
+<pre><code [highlight]="code2" class="p-2"></code></pre>
+<h6>Manual ripples</h6>
+<p>Ripples can be shown programmatically by getting a reference to the MatRipple directive.</p>
+<pre><code [highlight]="code3" class="p-2"></code></pre>
+
+<p>In the example above, no specific coordinates have been passed, because the centered ripple option has been set to true and the coordinates would not matter.
+</p>
+<p>Ripples that are being dispatched programmatically can be launched with the persistent option. This means that the ripples will not fade out automatically, and need to be faded out using the RippleRef (useful for focus indicators).
+</p>
+<p>In case, developers want to launch ripples at specific coordinates within the element, the launch() method also accepts x and y coordinates as parameters. Those coordinates are relative to the ripple container element.</p>
+<pre><code [highlight]="code4" class="p-2"></code></pre>
+<h5>Global options</h5>
+<p>Developers are able to specify options for all ripples inside of their application.</p>
+
+<p>The speed of the ripples can be adjusted and the ripples can be disabled globally as well.</p>
+
+<p>Global ripple options can be specified by setting the MAT_RIPPLE_GLOBAL_OPTIONS provider.</p>
+<pre><code [highlight]="code5" class="p-2"></code></pre>
+<p>All available global options can be seen in the RippleGlobalOptions interface.</p>
+<h6>API</h6>
+    <h5>API reference for Angular Material ripple</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatRipple</h5>
+    
+    <p>Selector: <code>[mat-ripple] [matRipple]</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleAnimation'</span>)
+            </div><p class="docs-api-property-name">
+          <code>animation: RippleAnimationConfig</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Configuration for the ripple animation. Allows modifying the enter and exit animation
+    duration of the ripples. The animation durations will be overwritten if the
+    <code>NoopAnimationsModule</code> is being used.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleCentered'</span>)
+            </div><p class="docs-api-property-name">
+          <code>centered: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the ripple always originates from the center of the host element's bounds, rather
+    than originating from the location of the click event.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleColor'</span>)
+            </div><p class="docs-api-property-name">
+          <code>color: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Custom color for all ripples.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleDisabled'</span>)
+            </div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether click events will not trigger the ripple. Ripples can be still launched manually
+    by using the <code>launch()</code> method.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleRadius'</span>)
+            </div><p class="docs-api-property-name">
+          <code>radius: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>If set, the radius in pixels of foreground ripples when fully expanded. If unset, the radius
+    will be the distance from the center of the ripple to the furthest corner of the host element's
+    bounding rectangle.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleTrigger'</span>)
+            </div><p class="docs-api-property-name">
+          <code>trigger: HTMLElement</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The element that triggers the ripple when click events are received.
+    Defaults to the directive's host element.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleUnbounded'</span>)
+            </div><p class="docs-api-property-name">
+          <code>unbounded: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the ripples should be visible outside the component's bounds.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

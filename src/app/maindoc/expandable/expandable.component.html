@@ -1,0 +1,129 @@
+<div class="wrapper">
+    <h4>Expansion Panel</h4>
+    <h5>Overview</h5>
+    <p>mat-divider is a component that allows for Material styling of a line separator with various orientation options.</p>
+    <div class="example">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  This is the expansion title
+                </mat-panel-title>
+                <mat-panel-description>
+                  This is a summary of the content
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>This is the primary content of the panel.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Self aware panel
+                </mat-panel-title>
+                <mat-panel-description>
+                  Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Expansion-panel content</h6>
+    <strong>Header</strong>
+
+<p>The <code>mat-expansion-panel-header</code> shows a summary of the panel content and acts as the control for expanding and collapsing. This header may optionally contain an <code>mat-panel-title</code>and an <code>mat-panel-description</code>, which format the content of the header to align with Material Design specifications.</p>
+<pre><code [highlight]="code" class="p-2"></code></pre>
+
+<h6>API</h6>
+    <h5>API reference for Angular Material expansion</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatAccordion extends CdkAccordion</h5>
+    <p>Selector: <code>mat-accordion</code></p>
+    <p><strong>Properties</strong></p>
+    
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+        
+        <tr class="docs-api-properties-row">
+        <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>displayMode: MatAccordionDisplayMode</code>
+        </p>
+        </td>
+        <td class="docs-api-property-description"><p>Display mode used for all expansion panels in the accordion. Currently two display
+        modes exist:
+        default - a gutter-like spacing is placed around any expanded panel, placing the expanded
+        panel at a different elevation from the rest of the accordion.
+        flat - no spacing is placed around expanded panels, showing all panels at the same
+        elevation.</p>
+        </td>
+        </tr>
+        
+        
+        
+          
+        
+        <tr class="docs-api-properties-row">
+        <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>hideToggle: boolean</code>
+        </p>
+        </td>
+        <td class="docs-api-property-description"><p>Whether the expansion indicator should be hidden.</p>
+        </td>
+        </tr>
+        
+        
+        
+          
+        
+        <tr class="docs-api-properties-row">
+        <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>multi: boolean</code>
+        </p>
+        </td>
+        <td class="docs-api-property-description"><p>Whether the accordion should allow multiple expanded accordion items simultaneously.</p>
+        </td>
+        </tr>
+        
+        
+        
+          
+        
+        <tr class="docs-api-properties-row">
+        <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>togglePosition: MatAccordionTogglePosition</code>
+        </p>
+        </td>
+        <td class="docs-api-property-description"><p>The position of the expansion indicator.</p>
+        </td>
+        </tr>
+        
+        
+        
+          
+        
+        <tr class="docs-api-properties-row">
+        <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>id: cdk-accordion-nextId</code>
+        </p>
+        </td>
+        <td class="docs-api-property-description"><p>A readonly id value to use for unique selection coordination.</p>
+        </td>
+        </tr>
+        
+        
+        
+        </tbody></table>
+</div>

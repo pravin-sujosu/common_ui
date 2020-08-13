@@ -1,0 +1,152 @@
+<div class="wrapper">
+    <h4>Table</h4>
+    <h5>Overview</h5>
+    <p>The mat-table provides a Material Design styled data-table that can be used to display rows of data.</p>
+    <div class="example">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+    <h6>Pagination</h6>
+<p>To paginate the table's data, add a &lt;mat-paginator&gt; after the table.</p>
+<p>If you are using the MatTableDataSource for your table's data source, simply provide the MatPaginator to your data source. It will automatically listen for page changes made by the user and send the right paged data to the table.</p>>
+<p>Otherwise if you are implementing the logic to paginate your data, you will want to listen to the paginator's (page) output and pass the right slice of data to your table.</p>
+
+<p>The overlap of the badge in relation to its inner contents can also be defined using the matBadgeOverlap tag. Typically, you want the badge to overlap an icon and not a text phrase. By default it will overlap.</p>
+
+<p>The MatPaginator is one provided solution to paginating your table's data, but it is not the only option. In fact, the table can work with any custom pagination UI or strategy since the MatTable and its interface is not tied to any one specific implementation.</p>
+<div class="example">
+    <table mat-table [dataSource]="dataSource1">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Weight </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Symbol </th>
+          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+<h6>API</h6>
+    <h5>API reference for Angular Material table</h5>
+    <p><code>{{api}}</code></p>
+
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matColumnDef'</span>)
+            </div><p class="docs-api-property-name">
+          <code>name: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Unique name for this column.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>sticky: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'stickyEnd'</span>)
+            </div><p class="docs-api-property-name">
+          <code>stickyEnd: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether this column should be sticky positioned on the end of the row. Should make sure
+    that it mimics the <code>CanStick</code> mixin such that <code>_hasStickyChanged</code> is set to true if the value
+    has been changed.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>cssClassFriendlyName: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Transformed version of the column name that can be used as part of a CSS classname. Excludes
+    all non-alphanumeric characters and the special characters '-' and '_'. Any characters that
+    do not match are replaced by the '-' character.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

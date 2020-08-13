@@ -1,0 +1,261 @@
+<div class="wrapper">
+    <h4>Slider</h4>
+    <h5>Overview</h5>
+    <p><&lt;at-slider&gt; allows for the selection of a value from a range via mouse, touch, or keyboard, similar to &lt;input type="range"&gt;.</p>
+    <div class="example">
+        <mat-slider></mat-slider>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Selecting a value</h6>
+<p>By default the minimum value of the slider is 0, the maximum value is 100, and the thumb moves in increments of 1. These values can be changed by setting the min, max, and step attributes respectively. The initial value is set to the minimum value unless otherwise specified.</p>
+<pre><code [highlight]="code" class="p-2"></code></pre>
+<h6>Orientation</h6>
+<p>By default sliders are horizontal with the minimum value on the left and the maximum value on the right. The vertical attribute can be added to a slider to make it vertical with the minimum value on bottom and the maximum value on top.</p>
+<pre><code [highlight]="code1" class="p-2"></code></pre>
+
+<p>An invert attribute is also available which can be specified to flip the axis that the thumb moves along. An inverted horizontal slider will have the minimum value on the right and the maximum value on the left, while an inverted vertical slider will have the minimum value on top and the maximum value on bottom.</p>
+<pre><code [highlight]="code2" class="p-2"></code></pre>
+<h6>Thumb label</h6>
+<p>By default, the exact selected value of a slider is not visible to the user. However, this value can be added to the thumb by adding the thumbLabel attribute.</p>
+<pre><code [highlight]="code3" class="p-2"></code></pre>
+<h6>API</h6>
+    <h5>API reference for Angular Material slider</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatSlider</h5>
+    <p>Allows users to select from a range of values by moving the slider thumb. It is similar in behavior to the native &lt;input type="range"&gt; element.</p>
+    <p>Selector: <code>mat-slider</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>displayWith: (value: number) =&gt; string | number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Function that will be used to format the value before it is displayed
+    in the thumb label. Can be used to format very large number in order
+    for them to fit into the slider thumb.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>invert: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the slider is inverted.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>max: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The maximum value that the slider can have.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>min: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The minimum value that the slider can have.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>step: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The values at which the thumb will snap.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>thumbLabel: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether or not to show the thumb label.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>tickInterval: number | "auto"</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>How often to show ticks. Relative to the step so that a tick always appears on a step.
+    Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12 values).</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>value: number | null</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Value of the slider.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>vertical: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the slider is vertical.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>change: EventEmitter&lt;MatSliderChange&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Event emitted when the slider value has changed.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>input: EventEmitter&lt;MatSliderChange&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Event emitted when the slider thumb moves.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>displayValue: string | number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The value to be used for display purposes.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>onTouched: () =&gt; any</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>onTouch function registered via registerOnTouch (ControlValueAccessor).</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>percent: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The percentage of the slider that coincides with the value.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

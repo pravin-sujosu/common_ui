@@ -1,0 +1,141 @@
+<div class="wrapper">
+    <h4>Paginator</h4>
+    <h5>Overview</h5>
+    <p>&lt;mat-paginator&gt; provides navigation for paged information, typically used with a table.</p>
+    <div class="example">
+        <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Basic use</h6>
+<p>Each paginator instance requires:</p>
+<ul>
+    <li>The number of items per page (default set to 50)</li>
+    <li>The total number of items being paged</li>
+</ul>
+<p>The current page index defaults to 0, but can be explicitly set via pageIndex.</p>
+<p>When the user interacts with the paginator, a PageEvent will be fired that can be used to update any associated data view.</p>
+
+
+<h6>Page size options</h6>
+<p>The paginator displays a dropdown of page sizes for the user to choose from. The options for this dropdown can be set via pageSizeOptions</p>
+<p>The current pageSize will always appear in the dropdown, even if it is not included in pageSizeOptions.</p>>
+<h6>Internationalization</h6>
+<p>The labels for the paginator can be customized by providing your own instance of MatPaginatorIntl. This will allow you to change the following:</p>
+<ol>
+    <li>The label for the length of each page.</li>
+    <li>The range text displayed to the user.</li>
+    <li>The tooltip messages on the navigation buttons.</li>
+</ol>
+<h6>Accessibility</h6>
+<p>The aria-labels for next page, previous page, first page and last page buttons can be set in MatPaginatorIntl.</p>
+<h6>API</h6>
+    <h5>API reference for Angular Material paginator</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatPaginatorIntl</h5>
+
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>changes: Subject&lt;void&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Stream to emit from when labels are changed. Use this to notify components when the labels have
+    changed after initialization.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>firstPageLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A label for the button that moves to the first page.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>{{tbl1code}}</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A label for the range of items within the current page and the length of the whole list.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>itemsPerPageLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A label for the page size selector.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>lastPageLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A label for the button that moves to the last page.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>nextPageLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A label for the button that increments the current page.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>previousPageLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>A label for the button that decrements the current page.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

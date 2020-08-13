@@ -1,0 +1,149 @@
+<div class="wrapper">
+    <h4>Input</h4>
+    <h5>Overview</h5>
+    <p>matInput is a directive that allows native &lt;input&gt; and &lt;textarea&gt; elements to work with &lt;mat-form-field&gt;.</p>
+    <div class="example">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="Sushi">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <mat-label>Leave a comment</mat-label>
+              <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+          </form>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>&lt;input&gt; and &lt;textarea&gt;  attributes</h6>
+<p>All of the attributes that can be used with normal &lt;input&gt; and &lt;textarea&gt; elements can be used on elements inside &lt;mat-form-field&gt; as well. This includes Angular directives such as ngModel and formControl.</p>
+<p>The only limitation is that the type attribute can only be one of the values supported by matInput.</p>
+<h4>Supported &lt;input&gt; types</h4>
+<p>The following input types can be used with matInput:</p>
+<ul>
+    <li>color</li>
+    <li>date</li>
+    <li>datetime-local</li>
+    <li>email</li>
+    <li>month</li>
+    <li>number</li>
+    <li>password</li>
+    <li>search</li>
+    <li>tel</li>
+    <li>text</li>
+    <li>time</li>
+    <li>url</li>
+    <li>week</li>
+    </ul>
+<h4> Form field features</h4>
+<p>There are a number of &lt;mat-form-field&gt; features that can be used with any &lt;input matInput&gt; or &lt;textarea matInput&gt;. These include error messages, hint text, prefix & suffix, and theming. For additional information about these features, see the form field documentation.</p>
+
+<h4>Placeholder</h4>
+<p>The placeholder is text shown when the &lt;mat-form-field> label is floating but the input is empty. It is used to give the user an additional hint about what they should type in the input. The placeholder can be specified by setting the placeholder attribute on the &lt;input&gt; or &lt;textarea&gt; element. In some cases that &lt;mat-form-field&gt; may use the placeholder as the label (see the form field label documentation).</p>
+
+   <h4>Changing when error messages are shown</h4>
+   <p>The &lt;mat-form-field&gt; allows you to associate error messages with your matInput. By default, these error messages are shown when the control is invalid and either the user has interacted with (touched) the element or the parent form has been submitted. If you wish to override this behavior (e.g. to show the error as soon as the invalid control is dirty or when a parent form group is invalid), you can use the errorStateMatcher property of the matInput. The property takes an instance of an ErrorStateMatcher object. An ErrorStateMatcher must implement a single method isErrorState which takes the FormControl for this matInput as well as the parent form and returns a boolean indicating whether errors should be shown. (true indicating that they should be shown, and false indicating that they should not.)</p>
+   <h4>API</h4>
+   <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkTextareaAutosize'</span>)
+        </div><p class="docs-api-property-name">
+      <code>enabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether autosizing is enabled or not</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'mat-autosize'</span>)
+        </div><p class="docs-api-property-name">
+      <code>matAutosize: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>matAutosizeMaxRows: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>matAutosizeMinRows: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>matTextareaAutosize: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkAutosizeMaxRows'</span>)
+        </div><p class="docs-api-property-name">
+      <code>maxRows: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Maximum amount of rows in the textarea.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkAutosizeMinRows'</span>)
+        </div><p class="docs-api-property-name">
+      <code>minRows: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Minimum amount of rows in the textarea.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+</div>

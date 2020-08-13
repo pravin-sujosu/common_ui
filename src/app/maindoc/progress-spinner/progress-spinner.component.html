@@ -1,0 +1,201 @@
+<div class="wrapper">
+    <h4>Progress Spinner</h4>
+    <h5>Overview</h5>
+    <p>&lt;mat-progress-spinner&gt; and &lt;mat-spinner&gt; are a circular indicators of progress and activity.</p>
+    <div class="example">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <pre><code [highlight]="code" class="p-2"></code></pre>    
+    <h6>BadProgress mode</h6>
+<p>The progress-spinner supports two modes, "determinate" and "indeterminate". The &lt;mat-spinner&gt; component is an alias for &lt;mat-progress-spinner mode="indeterminate"&gt;.</p>
+
+<table>
+    <thead>
+    <tr>
+    <th>Mode</th>
+    <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+    <td>determinate</td>
+    <td>Standard progress indicator, fills from 0% to 100%</td>
+    </tr>
+    <tr>
+    <td>indeterminate</td>
+    <td>Indicates that something is happening without conveying a discrete progress</td>
+    </tr>
+    </tbody></table>
+    <p>The default mode is "determinate". In this mode, the progress is set via the value property, which can be a whole number between 0 and 100.</p>
+    <p>In "indeterminate" mode, the value property is ignored.</p>
+
+<h6>API</h6>
+    <h5>API reference for Angular Material progress-spinner</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatProgressSpinner</h5>
+    <p>&lt;mat-progress-spinner&gt; component.</p>
+    <p>Selector: <code>mat-progress-spinner</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>diameter: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The diameter of the progress spinner (will set width and height of svg).</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>mode: ProgressSpinnerMode</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Mode of the progress circle</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>strokeWidth: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Stroke width of the progress spinner.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>value: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Value of the progress circle.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+
+    <h5>MatSpinner extends MatProgressSpinner</h5>
+    <p>&lt;mat-spinner&gt; component.</p>
+    <p>This is a component definition to be used as a convenience reference to create an indeterminate &lt;mat-progress-spinner&gt; instance.</p>
+    <p>Selector: <code>mat-spinner</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>diameter: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The diameter of the progress spinner (will set width and height of svg).</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>mode: ProgressSpinnerMode</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Mode of the progress circle</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>strokeWidth: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Stroke width of the progress spinner.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>value: number</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Value of the progress circle.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

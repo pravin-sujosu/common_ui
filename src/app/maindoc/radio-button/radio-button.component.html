@@ -1,0 +1,160 @@
+<div class="wrapper">
+    <h4>Radio button</h4>
+    <h5>Overview</h5>
+    <p>&lt;mat-radio-button&gt; provides the same functionality as a native &lt;input type="radio"&gt; enhanced with Material Design styling and animations.</p>
+    <div class="example">
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+          </mat-radio-group>
+    </div>
+<pre><code [highlight]="code" class="p-2"></code></pre>
+<p>All radio-buttons with the same name comprise a set from which only one may be selected at a time.</p>
+<h5>Radio-button label</h5>
+<p>The radio-button label is provided as the content to the &lt;mat-radio-button&gt; element. The label can be positioned before or after the radio-button by setting the labelPosition property to 'before' or 'after'.</p>
+<p>If you don't want the label to appear next to the radio-button, you can use aria-label or aria-labelledby to specify an appropriate label.</p>
+<h5>Radio groups</h5>
+<p>Radio-buttons should typically be placed inside of an &lt;mat-radio-group&gt; unless the DOM structure would make that impossible (e.g., radio-buttons inside of table cells). The radio-group has a value property that reflects the currently selected radio-button inside of the group.</p>
+<p>Individual radio-buttons inside of a radio-group will inherit the name of the group.</p>
+<h5>Use with @angular/forms</h5>
+<p>&lt;mat-radio-group&gt; is compatible with @angular/forms and supports both FormsModule and ReactiveFormsModule.</p>
+<h5>Accessibility</h5>
+<p>The &lt;mat-radio-button&gt; uses an internal &lt;input type="radio"&gt; to provide an accessible experience. This internal radio button receives focus and is automatically labelled by the text content of the &lt;mat-radio-button&gt; element.</p>
+<p>Radio button groups should be given a meaningful label via aria-label or aria-labelledby.</p>
+
+
+<h6>API</h6>
+    <h5>API reference for Angular Material radio</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatRadioGroup</h5>
+    <p>A group of radio buttons. May contain one or more &lt;mat-radio-button&gt; elements.</p>
+    <p>Selector: <code>mat-radio-group</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>color: ThemePalette</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Theme color for all of the radio buttons in the group.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the radio group is disabled</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>labelPosition: 'before' | 'after'</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the labels should appear after or before the radio-buttons. Defaults to 'after'</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>name: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Name of the radio button group. All radio buttons inside this group will use this name.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>required: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the radio group is required</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>selected: T</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The currently selected radio button. If set to a new radio button, the radio group value
+    will be updated to match the new selected button.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>value: any</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Value for the radio-group. Should equal the value of the selected radio button if there is
+    a corresponding radio button with a matching value. If there is not such a corresponding
+    radio button, this value persists to be applied in case a new radio button is added with a
+    matching value.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+              @Output()</div><p class="docs-api-property-name">
+          <code>change: EventEmitter&lt;MatRadioChange&gt;</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Event emitted when the group value changes.
+    Change events are only emitted when the value changes due to user interaction with
+    a radio button (the same behavior as <code>&lt;input type-"radio"&gt;</code>).</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

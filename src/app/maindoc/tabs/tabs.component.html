@@ -1,0 +1,153 @@
+<div class="wrapper">
+    <h4>Tabs</h4>
+    <h5>Overview</h5>
+    <p>Angular Material tabs organize content into separate views where only one view can be visible at a time. Each tab's label is shown in the tab header and the active tab's label is designated with the animated ink bar. When the list of tab labels exceeds the width of the header, pagination controls appear to let the user scroll left and right across the labels.</p>
+    <p>The active tab may be set using the selectedIndex input or when the user selects one of the tab labels in the header.</p>
+    <div class="example">
+        <mat-tab-group>
+            <mat-tab label="First"> Content 1 </mat-tab>
+            <mat-tab label="Second"> Content 2 </mat-tab>
+            <mat-tab label="Third"> Content 3 </mat-tab>
+          </mat-tab-group>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Events</h6>
+<p>The selectedTabChange output event is emitted when the active tab changes.</p>
+
+<p>The focusChange output event is emitted when the user puts focus on any of the tab labels in the header, usually through keyboard navigation.</p>
+
+
+<h6>Labels</h6>
+<p>If a tab's label is only text then the simple tab-group API can be used.</p>
+<pre><code [highlight]="code2" class="p-2"></code></pre>
+<h6> Tabs and navigation</h6>
+<p>While &lt;mat-tab-group&gt; is used to switch between views within a single route, &lt;nav mat-tab-nav-bar&gt; provides a tab-like UI for navigating between routes.</p>
+<pre><code [highlight]="code3" class="p-2"></code></pre>
+<h6>API</h6>
+    <h5>API reference for Angular Material tabs</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatTab</h5>
+   
+    <p>Selector: <code>mat-tab</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+            </div><p class="docs-api-property-name">
+          <code>ariaLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Aria label for the tab.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+            </div><p class="docs-api-property-name">
+          <code>ariaLabelledby: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Reference to the element that the tab is labelled by.
+    Will be cleared if <code>aria-label</code> is set at the same time.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'label'</span>)
+            </div><p class="docs-api-property-name">
+          <code>textLabel: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Plain text label for the tab, used when there is no template label.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>isActive: false</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the tab is currently active.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>origin: number | null</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The initial relatively index origin of the tab if it was created and selected after there
+    was already a selected tab. Provides context of what position the tab should originate from.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>position: number | null</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>The relatively indexed position where 0 represents the center, negative is left, and positive
+    represents the right.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+          <code>templateLabel: MatTabLabel</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Content for the tab label given by <code>&lt;ng-template mat-tab-label&gt;</code>.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>

@@ -1,0 +1,121 @@
+<div class="wrapper">
+    <h4>Sort</h4>
+    <h5>Overview</h5>
+    <p>The matSort and mat-sort-header are used, respectively, to add sorting state and display to tabular data.</p>
+    <div class="example">
+        <table matSort (matSortChange)="sortData($event)">
+            <tr>
+              <th mat-sort-header="name">Dessert (100g)</th>
+              <th mat-sort-header="calories">Calories</th>
+              <th mat-sort-header="fat">Fat (g)</th>
+              <th mat-sort-header="carbs">Carbs (g)</th>
+              <th mat-sort-header="protein">Protein (g)</th>
+            </tr>
+          
+            <tr *ngFor="let dessert of sortedData">
+              <td>{{dessert.name}}</td>
+              <td>{{dessert.calories}}</td>
+              <td>{{dessert.fat}}</td>
+              <td>{{dessert.carbs}}</td>
+              <td>{{dessert.protein}}</td>
+            </tr>
+          </table>
+    </div>
+    <pre><code [highlight]="codeex" class="p-2"></code></pre>
+    <h6>Adding sort to table headers</h6>
+<p>To add sorting behavior and styling to a set of table headers, add the &lt;mat-sort-header&gt; component to each header and provide an id that will identify it. These headers should be contained within a parent element with the matSort directive, which will emit a matSortChange event when the user triggers sorting on the header.</p>
+<p>Users can trigger the sort header through a mouse click or keyboard action. When this happens, the matSort will emit a matSortChange event that contains the ID of the header triggered and the direction to sort (asc or desc).</p>
+<h6>Changing the sort order</h6>
+<p>By default, a sort header starts its sorting at asc and then desc. Triggering the sort header after desc will remove sorting.</p>
+<p>By default, a sort header starts its sorting at asc and then desc. Triggering the sort header after desc will remove sorting.</p>
+
+<p>To reverse the sort order for all headers, set the matSortStart to desc on the matSort directive. To reverse the order only for a specific header, set the start input only on the header instead.</p>
+<p>To prevent the user from clearing the sort state from an already sorted column, set matSortDisableClear to true on the matSort to affect all headers, or set disableClear to true on a specific header.</p>
+<h6>API</h6>
+    <h5>API reference for Angular Material sort</h5>
+    <p><code>{{api}}</code></p>
+    <h6>Directives</h6>
+    <hr>
+    <h5>MatSortHeader</h5>
+  
+    <p>Selector: <code>[mat-sort-header]</code></p>
+    <p><strong>Properties</strong></p>
+    <table class="docs-api-properties-table">
+        <tbody><tr class="docs-api-properties-header-row">
+          <th class="docs-api-properties-th">Name</th>
+          <th class="docs-api-properties-th">Description</th>
+        </tr>
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>arrowPosition: 'before' | 'after'</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Sets the position of the arrow that displays when sorted.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disableClear: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Overrides the disable clear value of the containing MatSort for this MatSortable.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>disabled: boolean</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'mat-sort-header'</span>)
+            </div><p class="docs-api-property-name">
+          <code>id: string</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>ID of this sort header. If used within the context of a CdkColumnDef, this will default to
+    the column's name.</p>
+    </td>
+    </tr>
+    
+    
+        
+          
+    
+    <tr class="docs-api-properties-row">
+      <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+              @Input()</div><p class="docs-api-property-name">
+          <code>start: 'asc' | 'desc'</code>
+        </p>
+      </td>
+      <td class="docs-api-property-description"><p>Overrides the sort start value of the containing MatSort for this MatSortable.</p>
+    </td>
+    </tr>
+    
+    
+        
+      </tbody></table>
+</div>
